@@ -22,7 +22,6 @@ public class Signlink {
     private static final Logger LOGGER = Logger.getLogger(Signlink.class.getName());
     public static ClassLoader loader = ClassLoader.getSystemClassLoader();
 
-    //region Unzip Methods
     public static void unzip(byte[] data, Path outputPath) throws IOException {
         if (data == null || data.length == 0) {
             throw new IOException("Cannot unzip empty or null data.");
@@ -65,9 +64,7 @@ public class Signlink {
             }
         }
     }
-    //endregion
 
-    //region Download Methods
     public static byte[] download(String url) throws IOException {
         return download(url, null);
     }
@@ -134,9 +131,7 @@ public class Signlink {
             }
         }
     }
-    //endregion
 
-    //region File I/O Helpers
     public static void write(String path, byte[] data) throws IOException {
         if (data == null) {
             throw new IllegalArgumentException("Data to write cannot be null.");
@@ -192,9 +187,7 @@ public class Signlink {
     public static OutputStream getOutputStream(String name) throws IOException {
         return Files.newOutputStream(getPath(name));
     }
-    //endregion
 
-    //region Image/Font Helpers
     public static Image getImage(String name) throws IOException {
         return ImageIO.read(getInputStream("img/" + name));
     }
@@ -202,9 +195,7 @@ public class Signlink {
     public static Font getFont(String name) throws IOException, FontFormatException {
         return Font.createFont(Font.TRUETYPE_FONT, getInputStream("font/" + name));
     }
-    //endregion
 
-    //region Cache Initialization
     public static Path getCachePath() {
         return Paths.get(System.getProperty("user.home"), ".scape1");
     }
@@ -223,11 +214,9 @@ public class Signlink {
             LOGGER.log(Level.SEVERE, "Error creating cache directories: {0}", e.getMessage());
         }
     }
-    //endregion
 
-    //region Inner Interfaces
     public interface DownloadListener {
         void onRead(int percent);
     }
-    //endregion
+
 }
