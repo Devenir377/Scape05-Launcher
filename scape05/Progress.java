@@ -22,7 +22,7 @@ public class Progress {
         rootPanel.setBackground(Color.BLACK);
 
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(4, 6, 4, 6); // minimal margin around components
+        gbc.insets = new Insets(4, 6, 4, 6);
         gbc.weightx = 0;
         gbc.weighty = 0;
 
@@ -61,7 +61,6 @@ public class Progress {
         rootPanel.add(actionLabel, gbc);
     }
 
-    // --- Public getters for the Updater class to access these components ---
     public JPanel getRootPanel() {
         return rootPanel;
     }
