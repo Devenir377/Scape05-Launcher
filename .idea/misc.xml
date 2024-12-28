@@ -4,10 +4,7 @@
     <option name="show" value="ASK" />
     <option name="description" value="" />
   </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="48634506-cee4-4c2b-8fd4-716ed9bf32ab" />
-  </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8 (2)" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
