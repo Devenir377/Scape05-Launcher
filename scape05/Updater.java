@@ -111,7 +111,7 @@ public class Updater implements Runnable {
             LOGGER.info("Loaded localConfig from " + updaterPropsPath);
         } else {
             // No existing file, create one with default URL
-            localConfig.setProperty("clientPropertiesUrl", "https://scape05.com/client.properties");
+            localConfig.setProperty("clientPropertiesUrl", "https://devenir377.github.io/Scape05-Launcher/client.properties");
             saveLocalConfig();
             LOGGER.info("Created new updater with default URL.");
         }
@@ -202,7 +202,7 @@ public class Updater implements Runnable {
         String urlForClientProps = localConfig.getProperty("clientPropertiesUrl");
         if (urlForClientProps == null || urlForClientProps.isEmpty()) {
             // fallback if localConfig is missing it
-            urlForClientProps = "https://scape05.com/client.properties";
+            urlForClientProps = "https://devenir377.github.io/Scape05-Launcher/client.properties";
             localConfig.setProperty("clientPropertiesUrl", urlForClientProps);
             saveLocalConfig();
         }
